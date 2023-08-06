@@ -133,6 +133,13 @@ local function set_keymap()
 
 	-- Supported by nvim-session-manager
 	map("n", keys.switch_session, ":SessionManager load_session<CR>", option)
+
+	-- My sets 
+	-- Supported by hop
+	map("n", "<Leader><Leader>w", ":HopWordAC<CR>", option)
+	map("n", "<Leader><Leader>b", ":HopWordBC<CR>", option)
+	map("n", "s", ":HopChar1<CR>", option)
+	map("n", "q", ":HopWord<CR>", option)
 end
 
 -- Set up transparency
