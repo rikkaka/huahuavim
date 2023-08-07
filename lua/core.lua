@@ -12,15 +12,15 @@ local function set_keymap()
 	map("n", keys.jump_right_window, "<C-W>l", option)
 
 	vim.cmd([[
-    " press esc to cancel search highlight
-    nnoremap <silent> <Esc> :nohlsearch<CR>:echo<CR>
+	" press esc to cancel search highlight
+	nnoremap <silent> <Esc> :nohlsearch<CR>:echo<CR>
 	]])
 
 	-- for markdown file
 	vim.cmd([[
-    " optimized up and down move when set wrap for markdown file
-    autocmd FileType markdown noremap <buffer> j gj
-    autocmd FileType markdown noremap <buffer> k gk
+	" optimized up and down move when set wrap for markdown file
+	autocmd FileType markdown noremap <buffer> j gj
+	autocmd FileType markdown noremap <buffer> k gk
 	autocmd FileType markdown setlocal wrap
 	]])
 
@@ -127,8 +127,8 @@ local function set_keymap()
 	map("t", keys.terminal_bottom, "<C-\\><C-n>:lua _bottom_term_toggle()<CR>", option)
 
 	vim.cmd([[
-    command! Termfloat :lua _float_term_toggle()
-    ]])
+	command! Termfloat :lua _float_term_toggle()
+	]])
 	vim.cmd([[cnoreabbrev terminal Termfloat]])
 
 	-- Supported by nvim-session-manager
@@ -141,11 +141,15 @@ local function set_keymap()
 	map("n", "s", ":HopChar1<CR>", option)
 	map("n", "q", ":HopWord<CR>", option)
 	map("n", "<Leader><Leader>l", ":HopLine<CR>", option)
-	
-	--: Supported by rust-tools
+
+	-- Supported by rust-tools
 	map("n", "<Leader>h", ":RustHoverActions<CR>", option)
 
+	-- Supported by ZenMode
+	map("n", "<Leader>zen", ":ZenMode", option)
 
+	-- Others
+	map("n", "<leader>oo", "O<Esc>o", option)
 end
 
 -- Set up transparency
@@ -158,11 +162,7 @@ local function set_transparency()
 end
 
 -- Set up auto command
-local function set_autocmd()
-
-end
-
-
+local function set_autocmd() end
 
 set_keymap()
 set_transparency()
