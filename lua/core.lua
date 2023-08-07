@@ -140,6 +140,12 @@ local function set_keymap()
 	map("n", "<Leader><Leader>b", ":HopWordBC<CR>", option)
 	map("n", "s", ":HopChar1<CR>", option)
 	map("n", "q", ":HopWord<CR>", option)
+	map("n", "<Leader><Leader>l", ":HopLine<CR>", option)
+	
+	--: Supported by rust-tools
+	map("n", "<Leader>h", ":RustHoverActions<CR>", option)
+
+
 end
 
 -- Set up transparency
@@ -152,7 +158,11 @@ local function set_transparency()
 end
 
 -- Set up auto command
-local function set_autocmd() end
+local function set_autocmd()
+
+end
+
+
 
 set_keymap()
 set_transparency()
