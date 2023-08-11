@@ -153,14 +153,14 @@ local function set_keymap()
 	-- Others
 	map("n", "<leader>oo", "O<Esc>o", option)
 
-	map("n", "<D-v>", "p", option)
-	map("i", "<D-v>", "<C-r>+", option)
+	map("n", "<C-v>", "p", option)
+	map("i", "<C-v>", "<C-r>+", option)
 
 	map("n", "Q", ":q<CR>", option)
 
 	map("n", "<S-Enter>", "o<Esc>k", option)
 
-	map("i", "<D-n>", "<Esc>f,wce", option)
+	map("i", "<C-n>", "<Esc>f,wce", option)
 end
 
 -- Set up transparency
