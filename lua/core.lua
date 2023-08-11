@@ -126,6 +126,8 @@ local function set_keymap()
 	map("n", keys.terminal_bottom, ":lua _bottom_term_toggle()<CR>", option)
 	map("t", keys.terminal_bottom, "<C-\\><C-n>:lua _bottom_term_toggle()<CR>", option)
 
+	map("t", "<Esc>", "<C-\\><C-n>", option)
+
 	vim.cmd([[
 	command! Termfloat :lua _float_term_toggle()
 	]])
