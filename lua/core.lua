@@ -121,7 +121,7 @@ local function set_keymap()
 		bottom_terminal_default:toggle()
 	end
 
-	map("n", keys.terminal_float, ":lua _float_term_toggle()<CR>", option)
+	map({ "n", "i" }, keys.terminal_float, ":lua _float_term_toggle()<CR>", option)
 	map("t", keys.terminal_float, "<C-\\><C-n>:lua _float_term_toggle()<CR>", option)
 	map("n", keys.terminal_bottom, ":lua _bottom_term_toggle()<CR>", option)
 	map("t", keys.terminal_bottom, "<C-\\><C-n>:lua _bottom_term_toggle()<CR>", option)
@@ -134,7 +134,7 @@ local function set_keymap()
 	-- Supported by nvim-session-manager
 	map("n", keys.switch_session, ":SessionManager load_session<CR>", option)
 
-	-- My sets 
+	-- My sets
 	-- Supported by hop
 	map("n", "<Leader><Leader>w", ":HopWordAC<CR>", option)
 	map("n", "<Leader><Leader>b", ":HopWordBC<CR>", option)
@@ -146,10 +146,19 @@ local function set_keymap()
 	map("n", "<Leader>h", ":RustHoverActions<CR>", option)
 
 	-- Supported by ZenMode
-	map("n", "<Leader>zen", ":ZenMode", option)
+	map("n", "<Leader>zz", ":ZenMode<CR>", option)
 
 	-- Others
 	map("n", "<leader>oo", "O<Esc>o", option)
+
+	map("n", "<D-v>", "p", option)
+	map("i", "<D-v>", "<C-r>+", option)
+
+	map("n", "Q", ":q<CR>", option)
+
+	map("n", "<S-Enter>", "o<Esc>k", option)
+
+	map("i", "<D-n>", "<Esc>f,wce", option)
 end
 
 -- Set up transparency
@@ -163,6 +172,10 @@ end
 
 -- Set up auto command
 local function set_autocmd() end
+
+-- other sets
+vim.opt.clipboard = "unnamedplus"
+vim.opt.autoread = true
 
 set_keymap()
 set_transparency()
