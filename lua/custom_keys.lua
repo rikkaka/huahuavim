@@ -51,10 +51,10 @@ return {
 
 	-- View other usage of the plugin: https://github.com/mrjones2014/smart-splits.nvim
 	-- Use the shortcut to resize the window, <control + alt + hjkl>
-	resize_left = "<C-S-h>",
-	resize_down = "<C-S-j>",
-	resize_up = "<C-S-k>",
-	resize_right = "<C-S-l>",
+	resize_left = "<C-A-h>",
+	resize_down = "<C-A-j>",
+	resize_up = "<C-A-k>",
+	resize_right = "<C-A-l>",
 
 	-- View other usage of the plugin: https://github.com/neovim/nvim-lspconfig
 	-- Goto
