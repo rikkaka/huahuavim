@@ -176,7 +176,7 @@ end
 local function set_autocmd() end
 
 -- other sets
-vim.opt.clipboard = "unnamedplus"
+-- vim.opt.clipboard = "unnamedplus"
 vim.opt.autoread = true
 
 set_keymap()
