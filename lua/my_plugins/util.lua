@@ -24,11 +24,11 @@ return {
     },
 
     -- synchronisation of remote files
-    -- {
-    --     'kenn7/vim-arsync',
-    --     lazy = true,
-    --     dependencies = {
-    --         'prabirshrestha/async.vim'
-    --     }
-    -- }
+    {
+        'kenn7/vim-arsync',
+        lazy = true,
+        dependencies = {
+            'prabirshrestha/async.vim'
+        }
+    }
 }
